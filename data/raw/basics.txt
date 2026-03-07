@@ -1,0 +1,30 @@
+TOPIC: Ser vs Estar (The two verbs for "To Be")
+
+SER (Permanent/Essential characteristics)
+- Identity: Soy Lina. (I am Lina.)
+- Profession: Soy ingeniera de datos. (I am a data engineer.)
+- Origin: Soy de Marruecos. (I am from Morocco.)
+- Characteristics: El coche es rápido. (The car is fast.)
+- Time/Date: Son las tres. (It is three o’clock.)
+
+ESTAR (Temporary states/Location)
+- Position/Location: Estoy en Casablanca. (I am in Casablanca.)
+- Action (Present Progressive): Estoy aprendiendo español. (I am learning Spanish.)
+- Emotion/Condition: Estoy feliz. (I am happy.)
+- Physical state: La sopa está caliente. (The soup is hot.)
+
+---
+
+TOPIC: Por vs Para (The two words for "For")
+
+POR (Reason, Cause, Through, Exchange)
+- Reason/Cause: No fui por la lluvia. (I didn't go because of the rain.)
+- Through/Along: Camino por el parque. (I walk through the park.)
+- Duration: Estudié por dos horas. (I studied for two hours.)
+- Exchange: Te doy 10 euros por el libro. (I give you 10 euros for the book.)
+
+PARA (Purpose, Destination, Deadline, Recipient)
+- Purpose (In order to): Estudio para aprender. (I study in order to learn.)
+- Destination: Salgo para Madrid. (I am leaving for Madrid.)
+- Deadline: La tarea es para el lunes. (The homework is for Monday.)
+- Recipient: Este regalo es para ti. (This gift is for you.)

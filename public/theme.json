@@ -1,0 +1,20 @@
+{
+  "variables": {
+    "light": {
+      "--background": "47 100% 98%",
+      "--foreground": "1 37% 52%",
+      "--primary": "38 97% 61%",
+      "--card": "47 100% 95%",
+      "--border": "76 32% 45%",
+      "--accent-line": "1 37% 52%"
+    },
+    "dark": {
+      "--background": "222 47% 11%",
+      "--foreground": "47 100% 90%",
+      "--primary": "38 97% 61%",
+      "--card": "222 47% 15%",
+      "--border": "76 32% 30%",
+      "--accent-line": "38 97% 61%"
+    }
+  }
+}

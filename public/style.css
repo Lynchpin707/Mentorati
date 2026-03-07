@@ -1,0 +1,97 @@
+/* MENTORATI: Synchronized Minimalist CSS */
+
+body {
+    background-color: hsl(var(--background)) !important;
+    color: hsl(var(--foreground)) !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+/* Accent lines for Chat Bubbles */
+.step {
+    background-color: transparent !important;
+    margin-bottom: 24px !important;
+    padding: 0 !important;
+}
+
+/* Mentorati's Responses */
+.step[data-source="bot"] {
+    /* Uses the 'accent-line' variable which changes based on theme */
+    border-left: 3px solid hsl(var(--accent-line)) !important;
+    padding-left: 20px !important;
+}
+
+/* Input area refinement */
+/* 1. The Floating Container */
+#chat-input-container {
+    background: transparent !important; /* Remove the heavy background */
+    padding: 20px 0 !important;
+    border-top: none !important;
+}
+
+/* 2. The Type Bar - Minimalist Glassmorphism */
+#chat-input {
+    background: rgba(255, 255, 255, 0.7) !important; /* Frosted glass effect */
+    backdrop-filter: blur(8px);
+    
+    /* Using your identity colors for a subtle gradient border */
+    border: 2px solid transparent !important;
+    background-image: linear-gradient(white, white), 
+                      linear-gradient(to right, #B45253, #FCB53B) !important;
+    background-origin: border-box !important;
+    background-clip: padding-box, border-box !important;
+    
+    border-radius: 30px !important; /* Pill shape for comfort */
+    padding: 12px 20px !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05) !important;
+    transition: all 0.3s ease-in-out !important;
+}
+
+
+/* 3. The Focus State - "Glow" effect with Olive green */
+#chat-input:focus {
+    box-shadow: 0 8px 25px rgba(132, 153, 79, 0.2) !important;
+    border-color: #84994F !important;
+    transform: translateY(-2px); /* Subtle "lift" when typing */
+}
+
+/* 4. Dark Mode Support */
+.dark #chat-input {
+    background: rgba(30, 30, 30, 0.8) !important;
+    background-image: linear-gradient(#1e1e1e, #1e1e1e), 
+                      linear-gradient(to right, #B45253, #FCB53B) !important;
+    color: white !important;
+}
+
+/* 5. The Send Button - Marrakesh Red accent */
+#send-button {
+    background-color: #B45253 !important;
+    color: white !important;
+    border-radius: 50% !important;
+    margin-left: 10px !important;
+    transition: transform 0.2s ease !important;
+}
+
+
+
+/* Fix for the "Assistant" name color in Dark Mode */
+.author-name {
+    color: hsl(var(--primary)) !important;
+    font-weight: 600;
+}
+/* 1. Remove scrollbar from the actual typing area */
+#chat-input textarea {
+    overflow: hidden !important; /* Hides the scrollbar */
+    scrollbar-width: none !important; /* For Firefox */
+    -ms-overflow-style: none !important; /* For IE/Edge */
+    resize: none !important; /* Prevents the user from manually resizing the box */
+}
+
+/* 2. Webkit fix (Chrome/Safari/Brave) */
+#chat-input textarea::-webkit-scrollbar {
+    display: none !important;
+}
+
+/* 3. Ensure the wrapper doesn't create a secondary scrollbar */
+.MuiInputBase-root {
+    overflow: hidden !important;
+}
