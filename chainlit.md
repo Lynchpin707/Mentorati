@@ -1,4 +1,4 @@
-# 🍎 Mentorati (منطورتي)
+# Mentorati (منطورتي)
 
 **Mentorati** is a local, RAG-based (Retrieval-Augmented Generation) Spanish Grammar Tutor. The name is a mix of the word "Moualimati", which means my teacher in the morrocan dialect Darija and the Spanish word "Mentora" which stands for mentor/teacher.
 

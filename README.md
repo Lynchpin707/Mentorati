@@ -1,4 +1,4 @@
-# 🍎 Mentorati (منطورتي)
+# Mentorati (منطورتي)
 
 **Mentorati** is a local, RAG-based (Retrieval-Augmented Generation) Spanish Grammar Tutor. The name is a mix of the word "Moualimati", which means my teacher in the morrocan dialect Darija and the Spanish word "Mentora" which stands for mentor/teacher.
 
@@ -55,5 +55,11 @@ If your browser is not directly open, manually access this link : http://localho
 
 You should be able to see an interface smilar to :
 
-![Chat interface](docs/screenshots/Interface.png)
-Yes it's yellow, because any other color would be too sad for a cheerful spanish study session Jajaja. (I told you i was seriously studying spanish)
+<p align="center">
+<img src="docs/screenshots/Interface.png" alt="The chat interface" width="50%" height="50%">
+<p\>
+
+Yes it's yellow, because any other color would be too sad for a cheerful spanish study session **Jajaja**! (I told you i was seriously studying spanish)
+
+### Remarks,
+More grammar data should and will soon be added. As of March 7th, 2026, the RAG system is limited to the rules I know and manually added, and i doubt you can count on me to teach you spanis just yet Jajaja.
