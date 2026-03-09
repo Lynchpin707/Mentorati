@@ -1,17 +1,21 @@
 # Mentorati (منطورتي)
 
+<p align="center">
+<img src="public/logo_light.png" alt="Mentorati logo" width="50%" height="50%">
+</p>
+
 **Mentorati** is a local, RAG-based (Retrieval-Augmented Generation) Spanish Grammar Tutor. The name is a mix of the word "Moualimati", which means my teacher in the morrocan dialect Darija and the Spanish word "Mentora" which stands for mentor/teacher.
 
 Mentorati leverages local LLMs and a custom pipeline to provide explainable, context-aware grammar assistance without sending data to the cloud.
-Very usefull for when you don't have Wi-Fi but still need to study some spanish too !
+Very usefull for when you don't have Wi-Fi but still need to study some Spanish too !
 
 ### Objectives
 
-The objectives of this project are first and foremost educational, I wanted to build my own spanish AI assistant to help me with my spanish learning journey. To make that happen I set for myself the next set of goals : 
+The objectives of this project are first and foremost educational, I wanted to build my own Spanish AI assistant to help me with my Spanish learning journey. To make that happen I set for myself the next set of goals : 
 
 - Make a local and private AI assistant, no need for external APIs. (Hna gha talaba)
-- Ensure that the system understands my english AND spanish questions (like a real teacher would) with Multi-lingual retrieval.
-- Have a minimal layer of (XAI) explainable AI so that whenever the assistant gives me an answer it also gives me the source of the spanish rule or rules it used.
+- Ensure that the system understands my english AND Spanish questions (like a real teacher would) with Multi-lingual retrieval.
+- Have a minimal layer of (XAI) explainable AI so that whenever the assistant gives me an answer it also gives me the source of the Spanish rule or rules it used.
 - Have a smooth UI and a relatively short respond time.
 
 
@@ -41,7 +45,7 @@ python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 ```
-3. Ingest the spanish rules to your vector database.
+3. Ingest the Spanish rules to your vector database.
 
 ```bash
 python src/ingest.py
@@ -56,10 +60,15 @@ If your browser is not directly open, manually access this link : http://localho
 You should be able to see an interface smilar to :
 
 <p align="center">
-<img src="docs/screenshots/Interface.png" alt="The chat interface" width="50%" height="50%">
-<p\>
+<img src="docs/screenshots/Interface.png" alt="The chat interface" width="100%" height="100%">
+</p>
 
-Yes it's yellow, because any other color would be too sad for a cheerful spanish study session **Jajaja**! (I told you i was seriously studying spanish)
+Yes it's yellow, because any other color would be too sad for a cheerful Spanish study session **Jajaja**! (I told you i was seriously studying Spanish)
 
-### Remarks,
-More grammar data should and will soon be added. As of March 7th, 2026, the RAG system is limited to the rules I know and manually added, and i doubt you can count on me to teach you spanis just yet Jajaja.
+### Remarks
+More grammar data should and will soon be added. As of March 8th , 2026 (Happy Women's day btw), the RAG system is limited to the rules I know and manually added, and i doubt you can count on me to teach you Spanish just yet Jajaja.
+
+## Author
+This project was built by me, Lina Raoui. A data engineering student who loves to experiment with new technologies and who happened to be learning Spanish. 
+
+I built Mentorati because I wanted a private and local way to assist my language learning journey. So if you too are a fellow student or a language enthusiast looking for something similar, I hope you find this useful ! Or should i say **¡Espero que esto te resulte útil!**

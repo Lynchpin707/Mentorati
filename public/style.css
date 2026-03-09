@@ -1,97 +1,89 @@
-/* MENTORATI: Synchronized Minimalist CSS */
+/* MENTORATI: The Linguistic Ledger Style */
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@600&family=Inter:wght@300;400;600&display=swap');
+
+:root {
+    --marrakesh-red: #B45253;
+    --spanish-gold: #FCB53B;
+    --olive-drab: #84994F;
+    --paper-white: #FCFBF7;
+}
 
 body {
-    background-color: hsl(var(--background)) !important;
-    color: hsl(var(--foreground)) !important;
+    background-color: var(--paper-white) !important;
     font-family: 'Inter', sans-serif !important;
 }
 
-/* Accent lines for Chat Bubbles */
+/* 1. The Message Layout - Left Aligned for Focus */
 .step {
-    background-color: transparent !important;
-    margin-bottom: 24px !important;
-    padding: 0 !important;
+    max-width: 85% !important;
+    margin-bottom: 32px !important;
+    background: transparent !important;
+    border: none !important;
 }
 
-/* Mentorati's Responses */
-.step[data-source="bot"] {
-    /* Uses the 'accent-line' variable which changes based on theme */
-    border-left: 3px solid hsl(var(--accent-line)) !important;
-    padding-left: 20px !important;
+/* Mentorati (Assistant) - Serif Font & Red Accent */
+.step[data-source="bot"] .content {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    border-left: 4px solid var(--marrakesh-red) !important;
+    padding-left: 24px !important;
 }
 
-/* Input area refinement */
-/* 1. The Floating Container */
+.step[data-source="bot"] .author-name {
+    font-family: 'Crimson Pro', serif !important;
+    color: var(--marrakesh-red) !important;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+}
+
+/* User Messages - Gold Accent */
+.step[data-source="user"] .content {
+    border-left: 4px solid var(--spanish-gold) !important;
+    padding-left: 24px !important;
+    color: #555;
+}
+
+/* 2. The Input Bar - "The Fountain Pen" Style */
 #chat-input-container {
-    background: transparent !important; /* Remove the heavy background */
-    padding: 20px 0 !important;
-    border-top: none !important;
+    background: linear-gradient(to top, var(--paper-white) 80%, transparent) !important;
+    padding-bottom: 40px !important;
 }
 
-/* 2. The Type Bar - Minimalist Glassmorphism */
 #chat-input {
-    background: rgba(255, 255, 255, 0.7) !important; /* Frosted glass effect */
-    backdrop-filter: blur(8px);
-    
-    /* Using your identity colors for a subtle gradient border */
-    border: 2px solid transparent !important;
-    background-image: linear-gradient(white, white), 
-                      linear-gradient(to right, #B45253, #FCB53B) !important;
-    background-origin: border-box !important;
-    background-clip: padding-box, border-box !important;
-    
-    border-radius: 30px !important; /* Pill shape for comfort */
-    padding: 12px 20px !important;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05) !important;
-    transition: all 0.3s ease-in-out !important;
+    border: none !important;
+    border-bottom: 2px solid #e0e0e0 !important; /* Minimalist bottom line only */
+    border-radius: 0px !important;
+    background: transparent !important;
+    padding: 10px 0 !important;
+    font-size: 1.2rem !important;
+    transition: border-color 0.4s ease;
 }
 
-
-/* 3. The Focus State - "Glow" effect with Olive green */
 #chat-input:focus {
-    box-shadow: 0 8px 25px rgba(132, 153, 79, 0.2) !important;
-    border-color: #84994F !important;
-    transform: translateY(-2px); /* Subtle "lift" when typing */
+    border-bottom-color: var(--olive-drab) !important;
+    box-shadow: none !important;
 }
 
-/* 4. Dark Mode Support */
-.dark #chat-input {
-    background: rgba(30, 30, 30, 0.8) !important;
-    background-image: linear-gradient(#1e1e1e, #1e1e1e), 
-                      linear-gradient(to right, #B45253, #FCB53B) !important;
-    color: white !important;
+/* 3. Dark Mode Synchronization */
+.dark body {
+    background-color: #121212 !important;
+    color: #e0e0e0 !important;
 }
 
-/* 5. The Send Button - Marrakesh Red accent */
-#send-button {
-    background-color: #B45253 !important;
-    color: white !important;
-    border-radius: 50% !important;
-    margin-left: 10px !important;
-    transition: transform 0.2s ease !important;
+.dark .step[data-source="bot"] .content {
+    border-left-color: var(--spanish-gold) !important; /* Swap colors for visibility */
 }
 
 
-
-/* Fix for the "Assistant" name color in Dark Mode */
-.author-name {
-    color: hsl(var(--primary)) !important;
-    font-weight: 600;
-}
-/* 1. Remove scrollbar from the actual typing area */
-#chat-input textarea {
-    overflow: hidden !important; /* Hides the scrollbar */
-    scrollbar-width: none !important; /* For Firefox */
-    -ms-overflow-style: none !important; /* For IE/Edge */
-    resize: none !important; /* Prevents the user from manually resizing the box */
-}
-
-/* 2. Webkit fix (Chrome/Safari/Brave) */
-#chat-input textarea::-webkit-scrollbar {
-    display: none !important;
-}
-
-/* 3. Ensure the wrapper doesn't create a secondary scrollbar */
-.MuiInputBase-root {
-    overflow: hidden !important;
+/* Mentorati Zellij Accent for Chat Bubbles */
+.step::after {
+    content: "◈"; /* A simple geometric diamond pattern */
+    color: #FCB53B; /* Spanish Gold */
+    font-size: 1.2rem;
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0.6;
 }
